@@ -119,48 +119,86 @@
 
         /* Certificado PEM */
         .certificate-box {
-            margin: 20px;
+            margin: 24px auto;
+            max-width: 980px;
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 16px;
+            border-radius: 8px;
+            background: #fff;
         }
 
         .certificate-box h3 {
-            font-size: 1em;
+            font-size: 1.05em;
             margin-top: 0;
+            color: #2c3e50;
         }
 
         .pem-text {
             font-family: monospace;
             font-size: 0.75em;
             word-break: break-all;
-            background: #f9f9f9;
+            background: #f8fafc;
             padding: 10px;
-            border: 1px solid #eee;
-            height: 150px;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            height: 160px;
             overflow-y: auto;
             white-space: pre-wrap;
+            line-height: 1.5;
         }
 
         /* Rodapé Estilizado */
         footer {
             background-color: #1a252f;
             color: #f39c12;
-            padding: 30px 20px;
+            padding: 28px 20px;
             margin-top: 40px;
             font-size: 0.9em;
+            border-top: 4px solid #f39c12;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 22px;
+            margin-bottom: 16px;
         }
 
         footer a {
             color: #f39c12;
             text-decoration: none;
-            display: block;
-            margin-bottom: 8px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #ffd27a;
         }
 
         .copyright {
             text-align: center;
-            margin-top: 20px;
-            color: #f39c12;
+            margin-top: 6px;
+            color: #f5c67b;
+            font-size: 0.86em;
+        }
+
+        @media (max-width: 768px) {
+            .certificate-box {
+                margin: 20px;
+                padding: 12px;
+            }
+
+            .pem-text {
+                height: 140px;
+                font-size: 0.72em;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 8px;
+            }
         }
     </style>
 </head>
@@ -200,7 +238,7 @@
 
             <div class="info-block">
                 <span class="label">Documento de Identificação:</span>
-                <span>07136607671438</span>
+                <span>07136607671</span>
             </div>
 
             <div class="info-block">
@@ -236,15 +274,17 @@ lRTV<k+sckg#>>---
     </div>
 
     <footer>
-        <a href="#">Home</a>
-        <a href="#">Lei da Meia-entrada</a>
-        <a href="#">Chaves públicas</a>
-        <a href="#">FAQ</a>
-        <a href="#">Notícias</a>
-        <a href="#">Termos de Uso e Política de Privacidade</a>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Lei da Meia-entrada</a>
+            <a href="#">Chaves públicas</a>
+            <a href="#">FAQ</a>
+            <a href="#">Notícias</a>
+            <a href="#">Termos de Uso e Política de Privacidade</a>
+        </div>
         
         <div class="copyright">
-            @Meiaentrada.org.br - Todos os Direitos Reservados - 2026
+            meiaentrada.org.br · Todos os Direitos Reservados · 2026
         </div>
     </footer>
 
