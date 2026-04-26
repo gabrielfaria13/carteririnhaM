@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de CIE - Meia Entrada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-box {
+            border: 2px solid white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .logo-box span {
+            color: #ccc;
+            font-size: 0.8em;
+        }
+
+        /* Título Principal */
+        .main-title {
+            padding: 20px;
+            border-bottom: 4px solid #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .main-title h1 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin: 0;
+        }
+
+        /* Alerta de Documento Válido */
+        .status-container {
+            margin: 0 20px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Conteúdo dos Dados */
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .info-block {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            display: block;
+        }
+
+        /* Foto do Estudante */
+        .photo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .student-photo {
+            width: 150px;
+            height: 180px;
+            border: 1px solid #ccc;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        /* Certificado PEM */
+        .certificate-box {
+            margin: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .certificate-box h3 {
+            font-size: 1em;
+            margin-top: 0;
+        }
+
+        .pem-text {
+            font-family: monospace;
+            font-size: 0.75em;
+            word-break: break-all;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #eee;
+            height: 150px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        /* Rodapé Estilizado */
+        footer {
+            background-color: #1a252f;
+            color: #f39c12;
+            padding: 30px 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">meiaentrada<span>.org.br</span></div>
+        <div style="color: white; font-size: 1.5em;">&#9776;</div>
+    </header>
+
+    <div class="main-title">
+        <h1>Validação de CIE (Carteira de Identificação Estudantil)</h1>
+    </div>
+
+    <div class="status-container">
+        ✔ Documento válido!
+    </div>
+
+    <div class="content">
+        <p>ANPG atesta que <strong>Marcio Barbosa dos Reis Filho</strong> é estudante e está regularmente matriculado(a) em Curso Introdutorio em Avaliaco da instituição Hospital Alemao Oswaldo Cruz</p>
+
+        <div class="info-block">
+            <span class="label">Nome:</span>
+            <span>Marcio Barbosa dos Reis Filho</span>
+        </div>
+
+        <div class="info-block">
+            <span class="label">Instituição:</span>
+            <span>Hospital Alemao Oswaldo Cruz</span>
+        </div>
+
+        <div class="info-block">
+            <span class="label">Curso:</span>
+            <span>Curso Introdutorio em Avaliaco</span>
+        </div>
+
+        <div class="info-block">
+            <span class="label">Documento de Identificação:</span>
+            <span>07136607671</span>
+        </div>
+
+        <div class="info-block">
+            <span class="label">Emissor:</span>
+            <span>ANPG</span>
+        </div>
+    </div>
+
+    <div class="photo-container">
+        <img src="https://via.placeholder.com/150x180?text=Foto+Marcio" alt="Foto do Estudante" class="student-photo">
+    </div>
+
+    <div class="certificate-box">
+        <h3>Certificado de Atributo em formato PEM:</h3>
+        <div class="pem-text">
+-----BEGIN CERTIFICATE-----
+MIEBTCCAssCAGE x98f%8IMetzTRzQVQVQD=CUJETTM
+MIEBCBEQGUNKI,Lly,AliemaeGAUAAUaXCVNNTThUUINBTYl/DUOUNTSTSTRI
+SCERBT1MtRRYVBTK8MOGAAEI/EJW VghlypuCursoi2nhzhb/iVvvhvittrar
+@bstabababkt33KSSTSCJELMAK VVVYXRRsWKEQQYU0VQVQQL8IZbc6f!FTSuegv
+HVBABI EM OYQQUSVD1UNAMAM8RiwBXYNGBACFTSuwFYIAACSEABCYAPg/Mg
+VRGXlWlNYVQUULLOFFIN9liWRRbzBtBAAcafF KF MFFRFFBQUULHEVAHEFAHKJ
+DRTT1NTTTVOFFIESBQ0PTMAADUWMDAAMDA/MINOcGgSSgS3zBBBQ8AgaAgOB
+DnVUDMGWNYZBBKupZGEY6GYnMIMTNtNtANTM6SNMGAAMTU2AMTNSgGLCAGF6
+BS2DSGAEH6BRBBWfHMGBnd ABWMUWWAMQAAMTRP22erXXicxAgJEFZGAEGERWM
+HaGGB8IMMAQ QrvisFTP7A#Prs9qadflijaWhrchINchPreSZFR GRWRSZyGltF
+fNZTASTA93%l3urmi+MenPRg%&AxcedaCag9XxQCAS&GZLsw'6wP/RDzTxl8lrtm
+uipnTXsmn+AqQZZKHU AxVeivtf8pRhdfffhvlWkhHxN+TVKPp/TThxthwrt&g
+lRTV<k+sckg#>>---
+-----END CERTIFICATE-----
+        </div>
+    </div>
+
+    <footer>
+        <a href="#">Home</a>
+        <a href="#">Lei da Meia-entrada</a>
+        <a href="#">Chaves públicas</a>
+        <a href="#">FAQ</a>
+        <a href="#">Notícias</a>
+        <a href="#">Termos de Uso e Política de Privacidade</a>
+        
+        <div class="copyright">
+            @Meiaentrada.org.br - Todos os Direitos Reservados - 2026
+        </div>
+    </footer>
+
+</body>
+</html>
