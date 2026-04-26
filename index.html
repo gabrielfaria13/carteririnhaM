@@ -68,6 +68,18 @@
             line-height: 1.6;
         }
 
+        .content-wrapper {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .content-wrapper .content {
+            flex: 1;
+            padding: 0;
+        }
+
         .info-block {
             margin-bottom: 15px;
         }
@@ -80,15 +92,29 @@
         /* Foto do Estudante */
         .photo-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 0;
+            flex-shrink: 0;
         }
 
         .student-photo {
-            width: 150px;
-            height: 180px;
+            width: 170px;
+            height: 210px;
             border: 1px solid #ccc;
             object-fit: cover;
             background-color: #eee;
+            display: block;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            .student-photo {
+                width: 150px;
+                height: 180px;
+            }
         }
 
         /* Certificado PEM */
@@ -153,37 +179,39 @@
         ✔ Documento válido!
     </div>
 
-    <div class="content">
-        <p>ANPG atesta que <strong>Marcio Barbosa dos Reis Filho</strong> é estudante e está regularmente matriculado(a) em Curso Introdutorio em Avaliaco da instituição Hospital Alemao Oswaldo Cruz</p>
+    <div class="content-wrapper">
+        <div class="content">
+            <p>ANPG atesta que <strong>Marcio Barbosa dos Reis Filho</strong> é estudante e está regularmente matriculado(a) em Curso Introdutorio em Avaliaco da instituição Hospital Alemao Oswaldo Cruz</p>
 
-        <div class="info-block">
-            <span class="label">Nome:</span>
-            <span>Marcio Barbosa dos Reis Filho</span>
+            <div class="info-block">
+                <span class="label">Nome:</span>
+                <span>Marcio Barbosa dos Reis Filho</span>
+            </div>
+
+            <div class="info-block">
+                <span class="label">Instituição:</span>
+                <span>Hospital Alemao Oswaldo Cruz</span>
+            </div>
+
+            <div class="info-block">
+                <span class="label">Curso:</span>
+                <span>Curso Introdutorio em Avaliaco</span>
+            </div>
+
+            <div class="info-block">
+                <span class="label">Documento de Identificação:</span>
+                <span>07136607671</span>
+            </div>
+
+            <div class="info-block">
+                <span class="label">Emissor:</span>
+                <span>ANPG</span>
+            </div>
         </div>
 
-        <div class="info-block">
-            <span class="label">Instituição:</span>
-            <span>Hospital Alemao Oswaldo Cruz</span>
+        <div class="photo-container">
+            <img src="./Foto.jpeg?v=1" alt="Foto do Estudante" class="student-photo" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src='./foto.jpeg';}else if(this.dataset.fallback==='1'){this.dataset.fallback='2';this.src='./Foto.jpg';}else if(this.dataset.fallback==='2'){this.dataset.fallback='3';this.src='./foto.jpg';}else if(this.dataset.fallback==='3'){this.dataset.fallback='4';this.src='./Foto.png';}else if(this.dataset.fallback==='4'){this.dataset.fallback='5';this.src='./foto.png';}else{this.style.display='none';}">
         </div>
-
-        <div class="info-block">
-            <span class="label">Curso:</span>
-            <span>Curso Introdutorio em Avaliaco</span>
-        </div>
-
-        <div class="info-block">
-            <span class="label">Documento de Identificação:</span>
-            <span>07136607671</span>
-        </div>
-
-        <div class="info-block">
-            <span class="label">Emissor:</span>
-            <span>ANPG</span>
-        </div>
-    </div>
-
-    <div class="photo-container">
-        <img src="Foto.jpeg" alt="Foto do Estudante" class="student-photo">
     </div>
 
     <div class="certificate-box">
